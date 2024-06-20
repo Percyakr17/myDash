@@ -9,9 +9,9 @@
       display: flex;
       font-family: Arial, Helvetica, sans-serif;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       background-image: url('name1.jpg');
       background-size: cover;
@@ -31,11 +31,27 @@
       -webkit-text-fill-color: transparent;
     }
 
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      width: 100%;
+    }
 
     .card-container {
       display: flex;
-      gap: 50px;
       flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .card-row {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      width: 100%;
     }
 
     .card {
@@ -70,6 +86,10 @@
       background-color: #5ed43d;
     }
 
+    .card-c6 {
+      color: #ffffff;
+    }
+
     .card:hover {
       transform: scale(1.10);
     }
@@ -92,12 +112,21 @@
 
     @media (max-width: 768px) {
       body {
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         padding: 20px;
       }
 
+      h1 {
+        font-size: 2.5rem;
+      }
+
       .card-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .card-row {
         flex-direction: column;
         gap: 20px;
         align-items: center;
@@ -119,68 +148,68 @@
       width: 100%;
       text-align: center;
       padding: 10px 0;
-      position: absolute;
-      bottom: 0;
+      margin-top: auto;
     }
 
   </style>
 </head>
 <body>
-  <h1>Hello, I am Shamrth Garg</h1>
+  <div class="content">
+    <h1>Hello, I am Shamrth Garg</h1>
 
-  <div class="card-container">
-    <div class="card card-c1" onclick="redirectTo('https://leetcode.com/shamrth_garg/')">
-      <div class="card-content">
-        <h2>Leetcode</h2>
-        <div class="logo-container"><img src="leet.png" alt="Logo" class="logo"></div>
+    <div class="card-container">
+      <div class="card-row">
+        <div class="card card-c1" onclick="redirectTo('https://leetcode.com/shamrth_garg/')">
+          <div class="card-content">
+            <h2>Leetcode</h2>
+            <div class="logo-container"><img src="leet.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+
+        <div class="card card-c2" onclick="redirectTo('https://www.hackerrank.com/profile/samarth17garg')">
+          <div class="card-content">
+            <h2>HackerRank</h2>
+            <div class="logo-container"><img src="hack.jpg" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+
+        <div class="card card-c3" onclick="redirectTo('https://www.linkedin.com/in/shamrthgarg1120/')">
+          <div class="card-content">
+            <h2>LinkedIn</h2>
+            <div class="logo-container"><img src="link.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="card card-c2" onclick="redirectTo('https://www.hackerrank.com/profile/samarth17garg')">
-      <div class="card-content">
-        <h2>HackerRank</h2>
-        <div class="logo-container"><img src="hack.jpg" alt="Logo" class="logo"></div>
-      </div>
-    </div>
+      <div class="card-row">
+        <div class="card card-c5" onclick="redirectTo('https://github.com/Percyakr17')">
+          <div class="card-content">
+            <h2>GitHub</h2>
+            <div class="logo-container"><img src="git.jpg" alt="Logo" class="logo"></div>
+          </div>
+        </div>
 
-    <div class="card card-c3" onclick="redirectTo('https://www.linkedin.com/in/shamrthgarg1120/')">
-      <div class="card-content">
-        <h2>LinkedIn</h2>
-        <div class="logo-container"><img src="link.png" alt="Logo" class="logo"></div>
-      </div>
-    </div>
+        <div class="card card-c4" onclick="redirectTo('https://drive.google.com/drive/folders/1NUhDBakroe4o2P5BcbbHwi-1E_7EI9ii?usp=sharing')">
+          <div class="card-content">
+            <h2>G - Drive</h2>
+            <div class="logo-container"><img src="gdrive1.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
 
-    <div class="card card-c5" onclick="redirectTo('https://github.com/Percyakr17')">
-      <div class="card-content">
-        <h2>GitHub</h2>
-        <div class="logo-container"><img src="git.jpg" alt="Logo" class="logo"></div>
+        <div class="card card-c6" onclick="redirectTo('https://github.com/Percyakr17')">
+          <div class="card-content">
+            <h2>Live Projects</h2>
+            <div class="logo-container"><img src="projects.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-<br>
-<br>
-  <div class="card card-c4" onclick="redirectTo('https://drive.google.com/drive/folders/1NUhDBakroe4o2P5BcbbHwi-1E_7EI9ii?usp=sharing')">
-    <div class="card-content">
-      <h2>G - Drive</h2>
-      <div class="logo-container"><img src="gdrive1.png" alt="Logo" class="logo"></div>
-    </div>
-  </div>
-</div>
-<br>
-<div class="card card-c6" onclick="redirectTo('https://github.com/Percyakr17')">
-  <div class="card-content">
-    <h2>Live Projects</h2>
-    <div class="logo-container"><img src="projects.png" alt="Logo" class="logo"></div>
-  </div>
-</div>
-</div>
-<br><br><br><br>
 
   <div class="link-card" onclick="closeLink()"></div>
 
-
   <footer>
-     All rights reserved . &copy; Shamrth Garg 2024 .
+    All rights reserved. &copy; Shamrth Garg 2024.
   </footer>
 
   <script>
