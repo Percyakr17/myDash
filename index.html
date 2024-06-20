@@ -7,104 +7,75 @@
   <style>
     body {
       display: flex;
+      font-family: Arial, Helvetica, sans-serif;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-image: url('name2.jpg');
+      background-image: url('name1.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-color: #f0f0f0;
     }
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 2;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      background: rgb(250, 255, 255);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+
     .card-container {
       display: flex;
-      gap: 30px;
+      gap: 50px;
+      flex-wrap: wrap;
     }
-    .card-c1{
+
+    .card {
       width: 200px;
       height: 200px;
       color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card-c1 {
       background-color: #191817;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
     }
-    .card-c2{
-      width: 200px;
-      height: 200px;
-      color: #fff;
+
+    .card-c2 {
       background-color: #4a990a;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
     }
-    .card-c3{
-      width: 200px;
-      height: 200px;
-      color: #fff;
+
+    .card-c3 {
       background-color: #09496a;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
     }
 
-    .card-c4{
-      width: 200px;
-      height: 200px;
-      color: #fff;
-      background-color: #b2cc3e;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
+    .card-c4 {
+      color: #191817;
+      background-color: #ffffff;
     }
 
-    .card-c5{
-      width: 200px;
-      height: 200px;
-      color: #fff;
+    .card-c5 {
       background-color: #5ed43d;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
     }
 
-    .card-c1:hover {
-      transform: scale(1.25);
-    }.card-c2:hover {
-      transform: scale(1.25);
-    }.card-c3:hover {
-      transform: scale(1.25);
-    }.card-c4:hover {
-      transform: scale(1.25);
-    }.card-c5:hover {
-      transform: scale(1.25);
+    .card:hover {
+      transform: scale(1.10);
     }
 
     .card-content {
       padding: 45px;
-    }
-
-    .link-card {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      z-index: 2;
-      cursor: pointer;
     }
 
     .logo-container {
@@ -114,59 +85,113 @@
     }
 
     .logo {
-      width: 50px;
-      height: auto; 
+      width: 70px;
+      height: auto;
       margin-right: 10px;
     }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .card-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+    }
+
   </style>
 </head>
 <body>
+  <h1>Hello, I am Shamrth Garg</h1>
 
-<div class="card-container">
-  <div class="card-c1" onclick="redirectTo('https://leetcode.com/shamrth_garg/')">
-    <div class="card-content">
-      <h2>Leetcode</h2>
+  <div class="card-container">
+    <div class="card card-c1" onclick="redirectTo('https://leetcode.com/shamrth_garg/')">
+      <div class="card-content">
+        <h2>Leetcode</h2>
         <div class="logo-container"><img src="leet.png" alt="Logo" class="logo"></div>
-      <p></p>
+      </div>
+    </div>
+
+    <div class="card card-c2" onclick="redirectTo('https://www.hackerrank.com/profile/samarth17garg')">
+      <div class="card-content">
+        <h2>HackerRank</h2>
+        <div class="logo-container"><img src="hack.jpg" alt="Logo" class="logo"></div>
+      </div>
+    </div>
+
+    <div class="card card-c3" onclick="redirectTo('https://www.linkedin.com/in/shamrthgarg1120/')">
+      <div class="card-content">
+        <h2>LinkedIn</h2>
+        <div class="logo-container"><img src="link.png" alt="Logo" class="logo"></div>
+      </div>
+    </div>
+
+    <div class="card card-c5" onclick="redirectTo('https://github.com/Percyakr17')">
+      <div class="card-content">
+        <h2>GitHub</h2>
+        <div class="logo-container"><img src="git.jpg" alt="Logo" class="logo"></div>
+      </div>
     </div>
   </div>
-
-  <div class="card-c2" onclick="redirectTo('https://www.hackerrank.com/profile/samarth17garg')">
+<br>
+<br>
+  <div class="card card-c4" onclick="redirectTo('https://drive.google.com/drive/folders/1NUhDBakroe4o2P5BcbbHwi-1E_7EI9ii?usp=sharing')">
     <div class="card-content">
-      <h2>HackerRank</h2>
-      <div class="logo-container"><img src="hack.jpg" alt="Logo" class="logo"></div>
-      <p></p>
-    </div>
-  </div>
-
-  <div class="card-c3" onclick="redirectTo('https://www.linkedin.com/in/shamrthgarg1120/')">
-    <div class="card-content">
-      <h2>LinkedIn</h2>
-      <div class="logo-container"><img src="link.png" alt="Logo" class="logo"></div>
-      <p></p>
-    </div>
-  </div>
-
-  <div class="card-c5" onclick="redirectTo('https://github.com/Percyakr17')">
-    <div class="card-content">
-      <h2>GitHub</h2>
-      <div class="logo-container"><img src="git.jpg" alt="Logo" class="logo"></div>
-      <p></p>
+      <h2>G - Drive</h2>
+      <div class="logo-container"><img src="gdrive1.png" alt="Logo" class="logo"></div>
     </div>
   </div>
 </div>
+<br>
+<div class="card card-c6" onclick="redirectTo('https://github.com/Percyakr17')">
+  <div class="card-content">
+    <h2>Live Projects</h2>
+    <div class="logo-container"><img src="projects.png" alt="Logo" class="logo"></div>
+  </div>
+</div>
+</div>
+<br><br>
 
-<div class="link-card" onclick="closeLink()"></div>
+  <div class="link-card" onclick="closeLink()"></div>
 
-<script>
-  function redirectTo(url) {
-        window.location.href = url;
+
+  <footer>
+     All rights reserved . &copy; Shamrth Garg 2024 .
+  </footer>
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
     }
 
-  function closeLink() {
-    document.querySelector('.link-card').style.display ='none';
-  }
-</script>
+    function closeLink() {
+      document.querySelector('.link-card').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
