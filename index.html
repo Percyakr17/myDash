@@ -196,14 +196,12 @@
           </div>
         </div>
 
-        <div class="card card-c7" onclick="redirectTo('https://drive.google.com/drive/folders/1NUhDBakroe4o2P5BcbbHwi-1E_7EI9ii?usp=sharing')">
+        <div class="card card-c7" onclick="handleResumeClick()">
           <div class="card-content">
             <h2>Resume|CV</h2>
             <div class="logo-container"><img src="Res.png" alt="Logo" class="logo"></div>
           </div>
         </div>
-        
-
 
         <div class="card card-c6" onclick="redirectTo('https://github.com/Percyakr17')">
           <div class="card-content">
@@ -228,6 +226,11 @@
 
     function closeLink() {
       document.querySelector('.link-card').style.display = 'none';
+    }
+
+    function handleResumeClick() {
+      const resumeUrl = 'ShamrthGargResume.pdf';
+      window.open('ShamrthGargResume.pdf', '_blank');
     }
   </script>
 
