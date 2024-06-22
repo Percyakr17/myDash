@@ -203,7 +203,7 @@
           </div>
         </div>
 
-        <div class="card card-c6" onclick="redirectTo('https://github.com/Percyakr17')">
+        <div class="card card-c6" onclick="redirectTo('index1.html')">
           <div class="card-content">
             <h2>Live Projects</h2>
             <div class="logo-container"><img src="projects.png" alt="Logo" class="logo"></div>
@@ -212,8 +212,6 @@
       </div>
     </div>
   </div>
-
-  <div class="link-card" onclick="closeLink()"></div>
 
   <footer>
     All rights reserved. &copy; Shamrth Garg 2024.
@@ -224,13 +222,9 @@
       window.location.href = url;
     }
 
-    function closeLink() {
-      document.querySelector('.link-card').style.display = 'none';
-    }
-
     function handleResumeClick() {
       const resumeUrl = 'ShamrthGargResume.pdf';
-      window.open('ShamrthGargResume.pdf', '_blank');
+      window.open(resumeUrl, '_blank');
     }
   </script>
 
